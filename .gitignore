@@ -1,0 +1,91 @@
+# Compiled source #
+######################
+*.pyc
+*.so
+*.so.*
+*.dll
+*.o
+*.a
+*.hpp.gch
+
+# Packages #
+######################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.mat
+
+# Micro$oft Office #
+######################
+*.pptx
+*.PPTX
+*.docx
+*.DOCX
+*.xlsx
+*.XLSX
+
+# LateX
+######################
+*.aux
+*.log
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.out
+*.idx
+*.ilg
+*.ind
+*.bag
+*.BAG
+
+# Others #
+######################
+.depend
+\#*
+*.flv
+*.FLV
+*.mov
+*.MOV
+*.avi
+*.AVI
+*.mp4
+*.MP4
+*.mkv
+*.MKV
+*.mp3
+*.MP3
+*.wmv
+*.WMV
+*.pdf
+*.PDF
+.git/
+auto/
+
+# Learning #
+###################
+#checkpoint
+*.cptk.data-*
+*.cptk.index
+*.cptk.meta
+*.gif
+*.GIF
+
+# Python stuffs
+###################
+__pycache__/
+results/
