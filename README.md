@@ -53,6 +53,7 @@ Hotkeys:
 - matplotlib
 - imageio (for GIFs creation)
 - tk
+- networkx (if using od_mstar.py and not the C++ version)
 
 ### Authors
 
