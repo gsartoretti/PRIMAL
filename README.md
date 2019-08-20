@@ -57,7 +57,6 @@ Hotkeys:
 
 ### Authors
 
-[Guillaume Sartoretti](gsartore@andrew.cmu.edu)
+[Guillaume Sartoretti](guillaume.sartoretti@gmail.com)
 
 [Justin Kerr](jgkerr@andrew.cmu.edu)
-
