@@ -578,6 +578,10 @@ class MAPFEnv(gym.Env):
         if action==0:#staying still
             if action_status == 1:#stayed on goal
                 reward=GOAL_REWARD
+                x=self.get_blocking_reward(agent_id)
+                reward+=x
+                if x<0:
+                    blocking=True
             elif action_status == 0:#stayed off goal
                 reward=IDLE_COST
         else:#moving
