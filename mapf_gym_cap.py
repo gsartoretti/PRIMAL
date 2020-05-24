@@ -349,7 +349,7 @@ class MAPFEnv(gym.Env):
                 if self.world.state[i,j]==agent_id:
                     #agent's position
                     poss_map[i-top_left[0],j-top_left[1]]=1
-                elif self.world.goals[i,j]==agent_id:
+                if self.world.goals[i,j]==agent_id:
                     #agent's goal
                     goal_map[i-top_left[0],j-top_left[1]]=1
                 if self.world.state[i,j]>0 and self.world.state[i,j]!=agent_id:
