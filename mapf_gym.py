@@ -357,22 +357,12 @@ class MAPFEnv(gym.Env):
                     visible_agents.append(self.world.state[i,j])
                     poss_map[i-top_left[0],j-top_left[1]]=1
 
-        distance=lambda x1,y1,x2,y2:((x2-x1)**2+(y2-y1)**2)**.5
         for agent in visible_agents:
-            x,y=self.world.getGoal(agent)
-            if x<top_left[0] or x>=bottom_right[0] or y>=bottom_right[1] or y<top_left[1]:
-                #out of observation
-                min_node=(-1,-1)
-                min_dist=1000
-                for i in range(top_left[0],top_left[0]+self.observation_size):
-                    for j in range(top_left[1],top_left[1]+self.observation_size):
-                        d=distance(i,j,x,y)
-                        if d<min_dist:
-                            min_node=(i,j)
-                            min_dist=d
-                goals_map[min_node[0]-top_left[0],min_node[1]-top_left[1]]=1
-            else:
-                goals_map[x-top_left[0],y-top_left[1]]=1
+            x, y = self.world.getGoal(agent)
+            min_node = (max(top_left[0], min(top_left[0] + self.observation_size - 1, x)),
+                        max(top_left[1], min(top_left[1] + self.observation_size - 1, y)))
+            goals_map[min_node[0] - top_left[0], min_node[1] - top_left[1]] = 1
+
         dx=self.world.getGoal(agent_id)[0]-self.world.getPos(agent_id)[0]
         dy=self.world.getGoal(agent_id)[1]-self.world.getPos(agent_id)[1]
         mag=(dx**2+dy**2)**.5
