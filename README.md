@@ -5,6 +5,11 @@ collaboratively plan their paths in a 2D grid world, as
 well as to test/visualize the learned policy on handcrafted
 scenarios.
 
+**NEW**: Please try the online interactive demo of our trained
+PRIMAL model, available at [this link](https://primalgrid.netlify.app/primal)!
+You can customize the grid size, add/remove obstacle, add agents
+and assign them goals, and finally run the model online.
+
 ### File list
 
 - DRLMAPF_A3C_RNN.ipynb: Multi-agent training code. Training
